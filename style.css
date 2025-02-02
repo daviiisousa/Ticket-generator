@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Inconsolata", monospace;
+  src: url("./assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --neutral-0: hsl(0, 0%, 100%);
+  --neutral-300: hsl(252, 6%, 83%);
+  --neutral-500: hsl(245, 15%, 58%);
+  --neutral-700: hsl(245, 19%, 35%);
+  --neutral-900: hsl(248, 70%, 10%);
+
+  --orange-500: hsl(7, 88%, 67%);
+  --orange-700: hsl(7, 71%, 60%);
+
+  --gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+}
+
+body {
+  background-image: url("./assets/images/pattern-lines.svg"),
+    url("./assets/images/background-desktop.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-family: "Inconsolata", monospace;
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+main {
+  .siquiggly-line {
+    background-image: url("./assets/images/pattern-squiggly-line-bottom-desktop.svg");
+    width: 100%;
+    height: 100%;
+  }
+  .titulo {
+    font-size: 44px;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .paragrafo {
+    color: var(--neutral-300);
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 10px auto;
+
+    .labelText {
+      font-size: 22px;
+      color: var(--neutral-0);
+      padding-bottom: 10px;
+    }
+
+    .upload-box {
+      border: 2px dashed var(--neutral-300);
+      border-radius: 10px;
+      padding: 20px;
+      width: 500px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .upload-box:hover {
+      background-color: var(--neutral-900);
+    }
+
+    .upload-icon img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hidden-input {
+      display: none;
+    }
+
+    small {
+      display: flex;
+      align-items: center;
+      color: var(--neutral-300);
+      padding: 10px 0px;
+    }
+  }
+}
