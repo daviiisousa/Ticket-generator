@@ -15,13 +15,9 @@
   </head>
   <body>
     <header>
-      <img src="./assets/images/logo-full.svg" alt="" />
+      <img src="./assets/images/logo-full.svg" alt="logo" />
     </header>
-
-    <!-- Form starts -->
-
     <main>
-      <div class="siquiggly-line"></div>
       <h1 class="titulo">
         Your Journey to Coding Conf
         <h1 class="titulo">2025 Starts Here!</h1>
@@ -46,18 +42,39 @@
               class="hidden-input"
             />
           </label>
-          <small><img src="./assets/images/icon-info.svg" alt="info-icon">Upload your photo (JPG or PNG, max size: 500KB).</small>
+          <small
+            ><img src="./assets/images/icon-info.svg" alt="info-icon" />Upload
+            your photo (JPG or PNG, max size: 500KB).</small
+          >
         </div>
+        <label class="labelText" for="name">Full Name</label>
+        <input required type="text" id="name" class="inputForm" />
+        <label class="labelText" for="email">Email Address</label>
+        <input
+          required
+          type="email"
+          name="emai"
+          class="inputForm"
+          id="email"
+          placeholder="example@email.com"
+        />
+        <label class="labelText" for="gitHub">GitHub Username</label>
+        <input
+          required
+          type="text"
+          name="gitHub"
+          id="gitHub"
+          class="inputForm"
+          placeholder="@yourusername"
+        />
+        <button class="btnForm">Generate My Ticket</button>
       </form>
-      Full Name Email Address example@email.com GitHub Username @yourusername
-      Generate My Ticket
-      <!-- Form ends -->
       <!-- Generated tickets starts -->
-      Congrats,
-      <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
+      <!-- Congrats, -->
+      <!-- Full Name! Your ticket is ready. We've emailed your ticket to -->
       <!-- Email Address -->
-      and will send updates in the run up to the event. Coding Conf Jan 31, 2025
-      / Austin, TX
+      <!-- and will send updates in the run up to the event. Coding Conf Jan 31, 2025
+      / Austin, TX -->
     </main>
 
     <!-- Generated tickets ends -->
