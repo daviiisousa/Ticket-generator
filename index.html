@@ -28,19 +28,22 @@
       </p>
 
       <form>
-        <label class="labelText" for="file-input">Upload Avatar</label>
+        <label class="labelText" for="fileInput">Upload Avatar</label>
         <div class="upload-container">
-          <label for="file-input" class="upload-box">
-            <div class="upload-icon">
-              <img src="./assets/images/icon-upload.svg" alt="Upload Icon" />
+          <label for="fileInput" class="upload-box">
+            <div id="hideForm">
+              <div class="upload-icon">
+                <img src="./assets/images/icon-upload.svg" alt="Upload Icon" />
+              </div>
+              <p>Drag and drop or click to upload</p>
+              <input
+                id="fileInput"
+                type="file"
+                accept="image/*"
+                class="hidden-input"
+              />
             </div>
-            <p>Drag and drop or click to upload</p>
-            <input
-              id="file-input"
-              type="file"
-              accept="image/*"
-              class="hidden-input"
-            />
+            <div id="file-info"></div>
           </label>
           <small
             ><img src="./assets/images/icon-info.svg" alt="info-icon" />Upload
@@ -70,6 +73,10 @@
         <button class="btnForm">Generate My Ticket</button>
       </form>
       <!-- Generated tickets starts -->
+
+      <div id="campo">
+
+      </div>
       <!-- Congrats, -->
       <!-- Full Name! Your ticket is ready. We've emailed your ticket to -->
       <!-- Email Address -->
