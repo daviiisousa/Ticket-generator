@@ -18,73 +18,66 @@
       <img src="./assets/images/logo-full.svg" alt="logo" />
     </header>
     <main>
-      <h1 class="titulo">
-        Your Journey to Coding Conf
-        <h1 class="titulo">2025 Starts Here!</h1>
-      </h1>
-
-      <p class="paragrafo">
-        Secure your spot at next year's biggest coding conference.
-      </p>
-
-      <form>
-        <label class="labelText" for="fileInput">Upload Avatar</label>
-        <div class="upload-container">
-          <label for="fileInput" class="upload-box">
-            <div id="hideForm">
-              <div class="upload-icon">
-                <img src="./assets/images/icon-upload.svg" alt="Upload Icon" />
+      <div id="divFormTicket">
+        <h1 class="titulo">
+          Your Journey to Coding Conf
+          <h1 class="titulo">2025 Starts Here!</h1>
+        </h1>
+        <p class="paragrafo">
+          Secure your spot at next year's biggest coding conference.
+        </p>
+        <form>
+          <label class="labelText" for="fileInput">Upload Avatar</label>
+          <div class="upload-container">
+            <label for="fileInput" class="upload-box">
+              <div id="hideForm">
+                <div class="upload-icon">
+                  <img src="./assets/images/icon-upload.svg" alt="Upload Icon" />
+                </div>
+                <p>Drag and drop or click to upload</p>
+                <input
+                  id="fileInput"
+                  type="file"
+                  accept="image/*"
+                  class="hidden-input"
+                />
               </div>
-              <p>Drag and drop or click to upload</p>
-              <input
-                id="fileInput"
-                type="file"
-                accept="image/*"
-                class="hidden-input"
-              />
-            </div>
-            <div id="file-info"></div>
-          </label>
-          <small
-            ><img src="./assets/images/icon-info.svg" alt="info-icon" />Upload
-            your photo (JPG or PNG, max size: 500KB).</small
-          >
-        </div>
-        <label class="labelText" for="name">Full Name</label>
-        <input required type="text" id="name" class="inputForm" />
-        <label class="labelText" for="email">Email Address</label>
-        <input
-          required
-          type="email"
-          name="emai"
-          class="inputForm"
-          id="email"
-          placeholder="example@email.com"
-        />
-        <label class="labelText" for="gitHub">GitHub Username</label>
-        <input
-          required
-          type="text"
-          name="gitHub"
-          id="gitHub"
-          class="inputForm"
-          placeholder="@yourusername"
-        />
-        <button class="btnForm">Generate My Ticket</button>
-      </form>
-      <!-- Generated tickets starts -->
+              <div id="file-info"></div>
+            </label>
+            <small
+              ><img src="./assets/images/icon-info.svg" alt="info-icon" />Upload
+              your photo (JPG or PNG, max size: 500KB).</small
+            >
+          </div>
+          <label class="labelText" for="name">Full Name</label>
+          <input required type="text" id="name" class="inputForm" />
+          <label class="labelText" for="email">Email Address</label>
+          <input
+            required
+            type="email"
+            name="email"
+            class="inputForm"
+            id="email"
+            placeholder="example@email.com"
+          />
+          <label class="labelText" for="gitHub">GitHub Username</label>
+          <input
+            required
+            type="text"
+            name="gitHub"
+            id="gitHub"
+            class="inputForm"
+            placeholder="@yourusername"
+          />
+          <button class="btnForm">Generate My Ticket</button>
+        </form>
+      </div>
 
       <div id="campo">
 
       </div>
-      <!-- Congrats, -->
-      <!-- Full Name! Your ticket is ready. We've emailed your ticket to -->
-      <!-- Email Address -->
-      <!-- and will send updates in the run up to the event. Coding Conf Jan 31, 2025
-      / Austin, TX -->
+      
     </main>
-
-    <!-- Generated tickets ends -->
 
     <!-- <div class="attribution">
       Challenge by

@@ -1,26 +1,41 @@
 const fileInput = document.getElementById("fileInput");
 const uploadBox = document.querySelector(".upload-box");
 const fileInfo = document.getElementById("file-info");
-const formElement = document.getElementById("hideForm")
-const ticket = document.getElementById("campo")
-const form = document.querySelector("form")
-let imgPreview = ''
+const formElement = document.getElementById("hideForm");
+const ticket = document.getElementById("campo");
+const form = document.querySelector("form");
+const formTicket = document.getElementById("divFormTicket");
+let imgPreview = "";
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault()
+  e.preventDefault();
 
-    const nome = form.name.value
-    const email = form.email.value
-    const gitHub = form.gitHub.value
-    const file = form.fileInput.files[0]
+  const nome = form.name.value;
+  const email = form.email.value;
+  const gitHub = form.gitHub.value;
+  const file = form.fileInput.files[0];
 
-    formElement.style.display = 'block'
-    imgPreview.style.display = 'none'
+  formElement.style.display = "block";
+  imgPreview.style.display = "none";
 
-    console.log(nome, email, gitHub, file)
-    
-    form.reset()
-})
+  console.log(nome, email, gitHub, file);
+  formTicket.style.display = "none";
+
+  ticket.innerHTML = `
+    <h1>Congrats, ${nome}! Your ticket is ready.</h1>
+    <p>We've emailed your ticket to ${email} and will send updates in the run-up to the event.</p>
+`;
+
+  // Se um arquivo foi enviado e for uma imagem, exibe a pré-visualização
+  if (file && file.type.startsWith("image/")) {
+    const imgUrl = URL.createObjectURL(file); // Cria um URL temporário da imagem
+    ticket.innerHTML += `<img src="${imgUrl}" alt="Uploaded image" style="max-width: 100%; margin-top: 10px;" />`;
+  } else {
+    ticket.innerHTML += `<p>No image uploaded.</p>`;
+  }
+
+  form.reset();
+});
 
 // Exibir informações do arquivo selecionado
 fileInput.addEventListener("change", () => {
@@ -53,13 +68,12 @@ uploadBox.addEventListener("drop", (e) => {
 function displayFileInfo(file) {
   // Limpa o conteúdo anterior
   fileInfo.innerHTML = "";
- 
 
   // Pré-visualizar imagem (se for um tipo suportado)
   if (file.type.startsWith("image/")) {
-    formElement.style.display = 'none'
+    formElement.style.display = "none";
     imgPreview = document.createElement("img");
-    imgPreview.classList = 'imgFile'
+    imgPreview.classList = "imgFile";
     imgPreview.src = URL.createObjectURL(file);
     imgPreview.style.maxWidth = "100%";
     imgPreview.style.marginTop = "10px";
