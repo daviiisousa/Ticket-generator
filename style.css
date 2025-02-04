@@ -51,12 +51,12 @@ header {
 }
 
 main {
-  height: 100%;
 
   .titulo {
     font-size: 48px;
     text-align: center;
-    margin: 0px;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .paragrafo {
@@ -151,5 +151,58 @@ main {
       height: 100px;
     }
    
+  }
+
+  .paiImgTicket{
+    background-image: url("./assets/images/pattern-ticket.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+
+    
+
+    width: 100%;
+    height: 50vh;
+  }
+
+  .tituloTicket{
+    text-align: center;
+    max-width: 800px;
+    margin: 0px auto;
+    font-size: 48px;
+  }
+
+  .spanNome{
+    color: var(--orange-500);
+  }
+
+  .spanEmail{
+    color: var(--orange-700);
+  }
+
+  .paragrafoTicket{
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0px;
+    font-size: 18px;
+    color: var(--neutral-500);
+  }
+
+  .imgTicket{
+    position: relative;
+    top: 160px;
+    left: 220px;
+    width: 20%;
+    height: 30%;
+    border-radius: 10px;
+  }
+
+  .divPerfilTicket{
+    display:flex ;
+    flex-direction: column;
+    position: relative;
+    top: 280px;
+    left: 450px;
   }
 }

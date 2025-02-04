@@ -22,14 +22,21 @@ form.addEventListener("submit", (e) => {
   formTicket.style.display = "none";
 
   ticket.innerHTML = `
-    <h1>Congrats, ${nome}! Your ticket is ready.</h1>
-    <p>We've emailed your ticket to ${email} and will send updates in the run-up to the event.</p>
+    <h1 class="tituloTicket">Congrats, <span class="spanNome">${nome}</span>! Your ticket is ready.</h1>
+    <p class="paragrafoTicket">We've emailed your ticket to <span class="spanEmail">${email}</span> and will send updates in the run-up to the event.</p>
 `;
 
   // Se um arquivo foi enviado e for uma imagem, exibe a pré-visualização
   if (file && file.type.startsWith("image/")) {
     const imgUrl = URL.createObjectURL(file); // Cria um URL temporário da imagem
-    ticket.innerHTML += `<img src="${imgUrl}" alt="Uploaded image" style="max-width: 100%; margin-top: 10px;" />`;
+    ticket.innerHTML += `
+    <div class="paiImgTicket">
+    <div class="divPerfilTicket">
+      <h2 class="nomeTicket">${nome}</h2>
+      <p> <img src="./assets/images/icon-github.svg" alt="icon github" />${gitHub}</p>
+    </div>
+    <img src="${imgUrl}" alt="Uploaded image" class="imgTicket" />
+    </div>`;
   } else {
     ticket.innerHTML += `<p>No image uploaded.</p>`;
   }
