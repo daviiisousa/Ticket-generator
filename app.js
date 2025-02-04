@@ -18,27 +18,38 @@ form.addEventListener("submit", (e) => {
   formElement.style.display = "block";
   imgPreview.style.display = "none";
 
-  console.log(nome, email, gitHub, file);
   formTicket.style.display = "none";
 
-  ticket.innerHTML = `
-    <h1 class="tituloTicket">Congrats, <span class="spanNome">${nome}</span>! Your ticket is ready.</h1>
-    <p class="paragrafoTicket">We've emailed your ticket to <span class="spanEmail">${email}</span> and will send updates in the run-up to the event.</p>
-`;
+  //   ticket.innerHTML = `
+  //     <h1 class="tituloTicket">Congrats, <span class="spanNome">${nome}</span>! Your ticket is ready.</h1>
+  //     <p class="paragrafoTicket">We've emailed your ticket to <span class="spanEmail">${email}</span> and will send updates in the run-up to the event.</p>
+  // `;
 
   // Se um arquivo foi enviado e for uma imagem, exibe a pré-visualização
   if (file && file.type.startsWith("image/")) {
     const imgUrl = URL.createObjectURL(file); // Cria um URL temporário da imagem
-    ticket.innerHTML += `
+    ticket.innerHTML = `
+     <h1 
+      class="tituloTicket">
+      Congrats, <span class="spanNome">${nome}</span>! Your ticket is ready.
+     </h1>
+    <p 
+      class="paragrafoTicket">
+      We've emailed your ticket to <span class="spanEmail">${email}</span> and will send updates in the run-up to the event.
+    </p>
     <div class="paiImgTicket">
-    <div class="divPerfilTicket">
-      <h2 class="nomeTicket">${nome}</h2>
-      <p> <img src="./assets/images/icon-github.svg" alt="icon github" />${gitHub}</p>
-    </div>
-    <img src="${imgUrl}" alt="Uploaded image" class="imgTicket" />
+      <div class="divPerfilTicket">
+        <img src="${imgUrl}" alt="Uploaded image" class="imgTicket" />
+        <div class="dadosPerfilTicket">
+          <h2 class="nomeTicket">${nome}</h2>
+          <p class="paragrafoGithub">
+            <img src="./assets/images/icon-github.svg" alt="icon github" />${gitHub}
+          </p>
+        </div>
+      </div>
     </div>`;
   } else {
-    ticket.innerHTML += `<p>No image uploaded.</p>`;
+    ticket.innerHTML = `<p>No image uploaded.</p>`;
   }
 
   form.reset();

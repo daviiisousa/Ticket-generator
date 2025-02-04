@@ -51,6 +51,8 @@ header {
 }
 
 main {
+  width: 100%;
+  height: 100%;
 
   .titulo {
     font-size: 48px;
@@ -159,8 +161,6 @@ main {
     background-size: auto;
     background-position: center center;
 
-    
-
     width: 100%;
     height: 50vh;
   }
@@ -190,19 +190,30 @@ main {
   }
 
   .imgTicket{
-    position: relative;
-    top: 160px;
-    left: 220px;
-    width: 20%;
-    height: 30%;
+    width: 50%;
+    height: 100%;
     border-radius: 10px;
+    object-fit: contain;
   }
 
   .divPerfilTicket{
     display:flex ;
-    flex-direction: column;
+    align-items: end;
+    gap: 20px;
     position: relative;
-    top: 280px;
-    left: 450px;
+    top: 180px;
+    left: 230px;
+    max-width: 35%;
+  }
+  
+  .dadosPerfilTicket{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .paragrafoGithub{
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
