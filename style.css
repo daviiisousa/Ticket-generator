@@ -199,17 +199,22 @@ main {
   .divPerfilTicket{
     display:flex ;
     gap: 10px;
-    padding: 20px;
+    margin: 10px 20px;
   }
   
   .dadosPerfilTicket{
     display: flex;
     flex-direction: column;
+    justify-content: end;
   }
 
   .paragrafoGithub{
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  .TickeLogo{
+    padding: 10px;
   }
 }

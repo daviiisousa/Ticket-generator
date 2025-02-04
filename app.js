@@ -33,6 +33,7 @@ form.addEventListener("submit", (e) => {
       We've emailed your ticket to <span class="spanEmail">${email}</span> and will send updates in the run-up to the event.
     </p>
     <div class="paiImgTicket">
+      <img class="TickeLogo" src="./assets/images/logo-full.svg" alt="logo" />
       <div class="divPerfilTicket">
         <img src="${imgUrl}" alt="Uploaded image" class="imgTicket" />
         <div class="dadosPerfilTicket">
