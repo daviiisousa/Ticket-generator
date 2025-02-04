@@ -20,11 +20,6 @@ form.addEventListener("submit", (e) => {
 
   formTicket.style.display = "none";
 
-  //   ticket.innerHTML = `
-  //     <h1 class="tituloTicket">Congrats, <span class="spanNome">${nome}</span>! Your ticket is ready.</h1>
-  //     <p class="paragrafoTicket">We've emailed your ticket to <span class="spanEmail">${email}</span> and will send updates in the run-up to the event.</p>
-  // `;
-
   // Se um arquivo foi enviado e for uma imagem, exibe a pré-visualização
   if (file && file.type.startsWith("image/")) {
     const imgUrl = URL.createObjectURL(file); // Cria um URL temporário da imagem
