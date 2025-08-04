@@ -165,7 +165,6 @@ main {
     max-width: 600px;
     margin: 20px auto;
     height: 280px;
-    border: 2px solid yellow;
     overflow-y: auto;
   }
 
@@ -198,14 +197,12 @@ main {
     height: 150px;
     border-radius: 10px;
     object-fit: contain;
-    border: 2px solid red;
   }
 
   .divPerfilTicket {
     display: flex;
     gap: 10px;
     margin: 10px 20px;
-    border: 2px solid purple;
   }
 
   .dadosPerfilTicket {
