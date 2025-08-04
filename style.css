@@ -25,20 +25,20 @@
 }
 
 body {
-  background-image:
-  url("./assets/images/pattern-squiggly-line-top.svg"),
-  url("./assets/images/pattern-lines.svg"), 
-  url("./assets/images/pattern-circle.svg"),
-  url("./assets/images/pattern-squiggly-line-bottom-desktop.svg"),
-  url("./assets/images/background-desktop.png");
+  background-image: url("./assets/images/pattern-squiggly-line-top.svg"),
+    url("./assets/images/pattern-lines.svg"),
+    url("./assets/images/pattern-circle.svg"),
+    url("./assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+    url("./assets/images/background-desktop.png");
 
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: right top, center top, center right , left bottom, center center;
+  background-position: right top, center top, center right, left bottom,
+    center center;
   background-size: auto, cover, auto, auto, cover;
-  
+
   color: white;
   font-family: "Inconsolata", monospace;
-  height: 125vh;
+  height: 100vh;
   max-width: 1000px;
   margin: 50px auto;
 }
@@ -53,11 +53,12 @@ header {
 main {
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 
   .titulo {
     font-size: 48px;
     text-align: center;
-    max-width: 800px;
+    max-width: fit-content;
     margin: 0 auto;
   }
 
@@ -73,6 +74,7 @@ main {
     flex-direction: column;
     max-width: 500px;
     margin: 10px auto;
+    height: 100%;
 
     .labelText {
       font-size: 22px;
@@ -116,7 +118,7 @@ main {
       gap: 10px;
     }
 
-    .inputForm{
+    .inputForm {
       border: 1px solid var(--neutral-500);
       border-radius: 10px;
       background-color: hsla(245, 19%, 35%, 0.48);
@@ -125,12 +127,12 @@ main {
       margin: 10px 0px;
       font-size: 18px;
     }
-    
-    .inputForm::placeholder{
+
+    .inputForm::placeholder {
       color: var(--neutral-500);
     }
 
-    .btnForm{
+    .btnForm {
       padding: 20px;
       border: none;
       border-radius: 10px;
@@ -145,17 +147,16 @@ main {
       transition: background-color ease-in-out 0.2s;
     }
 
-    .btnForm:hover{
+    .btnForm:hover {
       background-color: var(--orange-700);
     }
 
-    .imgFile{
+    .imgFile {
       height: 100px;
     }
-   
   }
 
-  .paiImgTicket{
+  .paiImgTicket {
     background-image: url("./assets/images/pattern-ticket.svg");
     background-repeat: no-repeat;
     background-size: auto;
@@ -164,24 +165,26 @@ main {
     max-width: 600px;
     margin: 20px auto;
     height: 280px;
+    border: 2px solid yellow;
+    overflow-y: auto;
   }
 
-  .tituloTicket{
+  .tituloTicket {
     text-align: center;
     max-width: 800px;
     margin: 0px auto;
     font-size: 48px;
   }
 
-  .spanNome{
+  .spanNome {
     color: var(--orange-500);
   }
 
-  .spanEmail{
+  .spanEmail {
     color: var(--orange-700);
   }
 
-  .paragrafoTicket{
+  .paragrafoTicket {
     max-width: 500px;
     text-align: center;
     margin: 0 auto;
@@ -190,31 +193,34 @@ main {
     color: var(--neutral-500);
   }
 
-  .imgTicket{
+  .imgTicket {
     width: 20%;
+    height: 150px;
     border-radius: 10px;
     object-fit: contain;
+    border: 2px solid red;
   }
 
-  .divPerfilTicket{
-    display:flex ;
+  .divPerfilTicket {
+    display: flex;
     gap: 10px;
     margin: 10px 20px;
+    border: 2px solid purple;
   }
-  
-  .dadosPerfilTicket{
+
+  .dadosPerfilTicket {
     display: flex;
     flex-direction: column;
     justify-content: end;
   }
 
-  .paragrafoGithub{
+  .paragrafoGithub {
     display: flex;
     align-items: center;
     gap: 8px;
   }
 
-  .TickeLogo{
+  .TickeLogo {
     padding: 10px;
   }
 }
