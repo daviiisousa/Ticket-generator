@@ -34,14 +34,16 @@ form.addEventListener("submit", (e) => {
     </p>
     <div class="containerTicket">
       <div class="paiImgTicket">
-        <img class="TickeLogo" src="./assets/images/logo-full.svg" alt="logo" />
-        <div class="divPerfilTicket">
-          <img src="${imgUrl}" alt="Uploaded image" class="imgTicket" />
-          <div class="dadosPerfilTicket">
-            <h2 class="nomeTicket">${nome}</h2>
-            <p class="paragrafoGithub">
-              <img src="./assets/images/icon-github.svg" alt="icon github" />${gitHub}
-            </p>
+        <div class="containerPerfilTicket">
+          <img class="TickeLogo" src="./assets/images/logo-full.svg" alt="logo" />
+          <div class="divPerfilTicket">
+            <img src="${imgUrl}" alt="Uploaded image" class="imgTicket" />
+            <div class="dadosPerfilTicket">
+              <h2 class="nomeTicket">${nome}</h2>
+              <p class="paragrafoGithub">
+                <img src="./assets/images/icon-github.svg" alt="icon github" />${gitHub}
+              </p>
+            </div>
           </div>
         </div>
       </div>

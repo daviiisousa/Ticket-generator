@@ -164,10 +164,18 @@ main {
     background-position: center center;
 
     background-size: contain;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     width: 100%;
+    height: 100%;
+  }
+
+  .containerPerfilTicket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .tituloTicket {
@@ -204,7 +212,6 @@ main {
   .divPerfilTicket {
     display: flex;
     gap: 10px;
-    margin: 10px 20px;
   }
 
   .dadosPerfilTicket {
@@ -219,9 +226,6 @@ main {
     gap: 8px;
   }
 
-  .TickeLogo {
-    padding: 10px;
-  }
 }
 
 @media (max-width: 1180px) {
@@ -233,16 +237,10 @@ main {
     margin-bottom: 20px;
   }
 
-  .paiImgTicket{
-    border: 1px solid red;
-    
-  }
-
-  .TickeLogo{
-    border: 1px solid yellow;
-  }
-
+ 
   .divPerfilTicket{
-    border: 1px solid purple;
+    align-items: center;
   }
+
+  
 }
