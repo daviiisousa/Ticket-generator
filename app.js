@@ -32,18 +32,21 @@ form.addEventListener("submit", (e) => {
       class="paragrafoTicket">
       We've emailed your ticket to <span class="spanEmail">${email}</span> and will send updates in the run-up to the event.
     </p>
-    <div class="paiImgTicket">
-      <img class="TickeLogo" src="./assets/images/logo-full.svg" alt="logo" />
-      <div class="divPerfilTicket">
-        <img src="${imgUrl}" alt="Uploaded image" class="imgTicket" />
-        <div class="dadosPerfilTicket">
-          <h2 class="nomeTicket">${nome}</h2>
-          <p class="paragrafoGithub">
-            <img src="./assets/images/icon-github.svg" alt="icon github" />${gitHub}
-          </p>
+    <div class="containerTicket">
+      <div class="paiImgTicket">
+        <img class="TickeLogo" src="./assets/images/logo-full.svg" alt="logo" />
+        <div class="divPerfilTicket">
+          <img src="${imgUrl}" alt="Uploaded image" class="imgTicket" />
+          <div class="dadosPerfilTicket">
+            <h2 class="nomeTicket">${nome}</h2>
+            <p class="paragrafoGithub">
+              <img src="./assets/images/icon-github.svg" alt="icon github" />${gitHub}
+            </p>
+          </div>
         </div>
       </div>
-    </div>`;
+    </div>`
+    ;
   } else {
     ticket.innerHTML = `<p>No image uploaded.</p>`;
   }

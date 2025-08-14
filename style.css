@@ -156,16 +156,18 @@ main {
     }
   }
 
+
   .paiImgTicket {
     background-image: url("./assets/images/pattern-ticket.svg");
     background-repeat: no-repeat;
-    background-size: auto;
+    
     background-position: center center;
 
-    max-width: 600px;
-    margin: 20px auto;
-    height: 280px;
-    overflow-y: auto;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .tituloTicket {
@@ -229,5 +231,18 @@ main {
 
   header {
     margin-bottom: 20px;
+  }
+
+  .paiImgTicket{
+    border: 1px solid red;
+    
+  }
+
+  .TickeLogo{
+    border: 1px solid yellow;
+  }
+
+  .divPerfilTicket{
+    border: 1px solid purple;
   }
 }
